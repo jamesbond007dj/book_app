@@ -1,7 +1,8 @@
 # book_app
 
 **Author**: ILKER ZAIMOGLU(JAMES BOND)
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+
+**Version**: 1.0.0 
 
 ## Overview
 This is an App that makes basic full stack for a book list which include the ability to search Google Books API, add books to a database, then render those books from a PostgreSQL database. 
