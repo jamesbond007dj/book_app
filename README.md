@@ -1,6 +1,6 @@
 # book_app
 
-**Author**: ILKER ZAIMOGLU(JAMES BOND)
+**Author**: TING LUO ; ILKER ZAIMOGLU(JAMES BOND)
 
 **Version**: 1.0.0 
 
@@ -27,7 +27,28 @@ APIs : Google Books API
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
 -->
+
+Number and name of feature: LAB 11 : Set up server
+
+Estimate of time needed to complete: 15 MIN
+
+Start time: 9 : 00 AM
+
+Finish time: 9 : 15 AM
+
+Actual time needed to complete: 15 MIN
+
+Number and name of feature: LAB 11 : LAB FEAUTURE ONE
+
+Estimate of time needed to complete: 30 MIN
+
+Start time: 9 : 15 AM
+
+Finish time: 10 : 00 AM
+
+Actual time needed to complete: 45 MIN
 
 Number and name of feature: LAB 11 : ETJ
 
