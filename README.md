@@ -40,6 +40,7 @@ Finish time: 9 : 15 AM
 
 Actual time needed to complete: 15 MIN
 
+------------------------------------------------------------
 Number and name of feature: LAB 11 : LAB FEAUTURE ONE
 
 Estimate of time needed to complete: 30 MIN
@@ -49,6 +50,66 @@ Start time: 9 : 15 AM
 Finish time: 10 : 00 AM
 
 Actual time needed to complete: 45 MIN
+
+------------------------------------------------------------
+
+Number and name of feature: LAB 11 : LAB FEAUTURE TWO
+
+Estimate of time needed to complete: 15 MIN
+
+Start time: 10 : 00 AM
+
+Finish time: 10 : 10 AM
+
+Actual time needed to complete: 10 MIN
+
+------------------------------------------------------------
+
+Number and name of feature: LAB 11 : LAB FEAUTURE THREE
+
+Estimate of time needed to complete: 15 MIN
+
+Start time: 10 : 00 AM
+
+Finish time: 10 : 10 AM
+
+Actual time needed to complete: 10 MIN
+------------------------------------------------------------
+
+Number and name of feature: LAB 11 : LAB FEAUTURE FOUR
+
+Estimate of time needed to complete: 1 HOUR
+
+Start time: 10 : 10 AM
+
+Finish time: 12 : 00 AM
+
+Actual time needed to complete: 1 Hour 50 MIN
+------------------------------------------------------------
+
+Number and name of feature: LAB 11 : LAB FEAUTURE FOUR
+
+Estimate of time needed to complete: 20 MIN
+
+Start time: 12 : 00 AM
+
+Finish time: 12 : 05 AM
+
+Actual time needed to complete: 5 MIN
+
+------------------------------------------------------------
+
+Number and name of feature: LAB 11 : LAB FEAUTURE FIVE
+
+Estimate of time needed to complete: 20 MIN
+
+Start time: 12 : 00 AM
+
+Finish time: 12 : 05 AM
+
+Actual time needed to complete: 5 MIN
+
+
 
 Number and name of feature: LAB 11 : ETJ
 
