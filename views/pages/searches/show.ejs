@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Book Collection</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="styles/reset.css" rel="stylesheet"/>
+    <link href="styles/base.css" rel="stylesheet"/>
+    <link href="styles/layout.css" rel="stylesheet"/>
+    <link href="styles/icons.css" rel="stylesheet"/>
+    <link href="styles/modules.css" rel="stylesheet"/>
+  </head>
   <body>
-    <h1>My Books List</h1>
-    <p><a href="/">Home</a></p>
-    <div>
+    <header>
+      <h1>Best Books!</h1>
+      <p><a href="/">Home</a></p>
+    </header>
+    <h2>Search Results</h2>
+    <article>
       <% bookList.forEach(book => { %>
+        <div>
         <img src=<%= book.url %> alt="bookcover">
-        <h1><%= book.title %></h1>
-        <h2><%= book.author %></h2>
+        <h3><%= book.title %></h3>
+        <h4><%= book.author %></h4>
         <p><%= book.description %></p>
-      <% }) %>
-    </div>
+      </div>
+      <% }) %>  
+    </article>
+    
     <!-- <ul>
       <li>Apples</li>
       <li>Pears</li>

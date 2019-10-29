@@ -87,15 +87,15 @@ Finish time: 12 : 00 AM
 Actual time needed to complete: 1 Hour 50 MIN
 ------------------------------------------------------------
 
-Number and name of feature: LAB 11 : LAB FEAUTURE FOUR
+Number and name of feature: LAB 11 : LAB FEAUTURE FIVE
 
 Estimate of time needed to complete: 20 MIN
 
-Start time: 12 : 00 AM
+Start time: 12 : 30 AM
 
-Finish time: 12 : 05 AM
+Finish time: 1 : 50 AM
 
-Actual time needed to complete: 5 MIN
+Actual time needed to complete: 90 MIN
 
 ------------------------------------------------------------
 
@@ -117,6 +117,6 @@ Estimate of time needed to complete: 3 HOURS
 
 Start time: 9 : 00 AM
 
-Finish time: 1 : 30 PM
+Finish time: 1 : 45 PM
 
-Actual time needed to complete: 4 HOURS
+Actual time needed to complete: 4 HOURS 15 MIN
