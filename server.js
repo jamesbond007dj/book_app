@@ -23,7 +23,7 @@ app.use(express.static('public'));
 app.get('/searches', newSearch);
 app.post('/searches', searchForBooks);
 app.get('/', getBooks);
-// app.post('/pages', getBooks);
+app.get('/books/:book_id', getOneBook);
 
 app.get('*', (request, response) => {
   response.status(404).send('this route does not exist');
@@ -44,20 +44,20 @@ function getBooks(request, response){
     .catch(error => errorHandler(error, response));
 }
 
-// function getOneTask(request, response){
-//   // go to the database, get a specific task using an id and show details of that task
-//   console.log(request.params.book_id);
+function getOneBook(request, response){
+  // go to the database, get a specific task using an id and show details of that task
+  console.log(request.params.book_id);
 
-//   const sql = `SELECT * FROM books WHERE id=$1;`;
-//   const safeValues = [request.params.book_id];
+  const sql = `SELECT * FROM books WHERE id=$1;`;
+  const safeValues = [request.params.book_id];
 
-//   client.query(sql, safeValues)
-//     .then(sqlResults => {
-//       const selectedBook = sqlResults.rows[0];
-//       response.render('pages/details', {taskInfo:selectedBook})
-//     })
-//     .catch(err => {console.error(err)});
-// }
+  client.query(sql, safeValues)
+    .then(sqlResults => {
+      const selectedBook = sqlResults.rows[0];
+      response.render('pages/books/detail', {bookInfo:selectedBook})
+    })
+    .catch(err => {console.error(err)});
+}
 
 
 function newSearch(request, response) {
