@@ -93,30 +93,21 @@ Estimate of time needed to complete: 20 MIN
 
 Start time: 12 : 30 AM
 
-Finish time: 1 : 50 AM
+Finish time: 1 : 50 PM
 
 Actual time needed to complete: 90 MIN
 
 ------------------------------------------------------------
 
-Number and name of feature: LAB 11 : LAB FEAUTURE FIVE
+Number and name of feature: LAB 12 : LAB FEAUTURE ONE
 
-Estimate of time needed to complete: 20 MIN
-
-Start time: 12 : 00 AM
-
-Finish time: 12 : 05 AM
-
-Actual time needed to complete: 5 MIN
-
-
-
-Number and name of feature: LAB 11 : ETJ
-
-Estimate of time needed to complete: 3 HOURS
+Estimate of time needed to complete: 90 MIN
 
 Start time: 9 : 00 AM
 
-Finish time: 1 : 45 PM
+Finish time: 11 : 15 AM
 
-Actual time needed to complete: 4 HOURS 15 MIN
+Actual time needed to complete: 135 MIN
+
+
+

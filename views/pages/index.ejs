@@ -1,36 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-      <title>Book Collection</title>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-      <link href="styles/reset.css" rel="stylesheet"/>
-      <link href="styles/base.css" rel="stylesheet"/>
-      <link href="styles/layout.css" rel="stylesheet"/>
-      <link href="styles/icons.css" rel="stylesheet"/>
-      <link href="styles/modules.css" rel="stylesheet"/>
-   </head>
+    <title>Book Collection</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="styles/reset.css" rel="stylesheet"/>
+    <link href="styles/base.css" rel="stylesheet"/>
+    <link href="styles/layout.css" rel="stylesheet"/>
+    <link href="styles/icons.css" rel="stylesheet"/>
+    <link href="styles/modules.css" rel="stylesheet"/>
+  </head>
   <body>
-    <main>
-      <h1>Hello World</h1>
-      <!-- action visits the route and method is the route method -->
-      <form action='/searches' method='post'>
-        <input type="text" name="search" placeholder="Enter a title or author" required>
-        <fieldset>
-          <label for="title">
-            <span>Title</span>
-            <input type="radio" name="search" value="title" required>
-          </label>
-        </fieldset>
-
-        <fieldset>
-            <label for="author">
-              <span>Author</span>
-              <input type="radio" name="search" value="author" required>
-            </label>
-          </fieldset>
-          <button type="submit">Search the Google Books API</button>
-      </form>
-    </main>
-  </body>
+    <header>
+      <h1>Best Books!</h1>
+      <p><a href="/">Home</a></p>
+    </header>
+    <h2>Search Results</h2>
+    <article>
+      <% books.forEach(book => { %>
+        <h4>Number of Books:<%= books.length %></h4>
+      <div>
+        <img src=<%= book.image_url %> alt="bookcover">
+        <h3><%= book.title %></h3>
+        <h4><%= book.author %></h4>
+        <p><%= book.description %></p>
+        <h4><%= book.isbn %></h4>
+      </div>
+      <% }) %>  
+    </article>
+   </body>
 </html>
+
