@@ -23,14 +23,20 @@
         <h3><%= book.title %></h3>
         <h4><%= book.author %></h4>
         <p><%= book.description %></p>
+        <button type="submit">Select this Book</button>
       </div>
       <% }) %>  
     </article>
+    <form action='/searches' method='post'>
+      <input type="text" name="title" placeholder="Enter a title or author" required>
+      <input type="text" name="author" placeholder="Enter a title or author" required>
+      <input type="text" name="ISBN" placeholder="Enter a title or author" required>
+      <input type="text" name="image_url" placeholder="Enter a title or author" required>
+      <input type="text" name="description" placeholder="Enter a title or author" required>
+     
+      <button type="submit">Search the Google Books API</button>
+    </form>
     
-    <!-- <ul>
-      <li>Apples</li>
-      <li>Pears</li>
-      <li>Bananas</li>
-    </ul> -->
   </body>
+  
 </html>
