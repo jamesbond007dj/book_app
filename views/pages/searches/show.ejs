@@ -23,21 +23,22 @@
         <h3><%= book.title %></h3>
         <h4><%= book.author %></h4>
         <p><%= book.description %></p>
-        <button type="submit">Select this Book</button>
-        <form action="/add" method="post">
+        <button id="formButton" type="submit">Edit Book</button>
+        <form class="form1" action="/add" method="post">
           <input type="text" name="title" value="<%= book.title %>" >
           <input type="text" name="author" value="<%= book.author %>" >
           <input type="text" name="isbn" value="<%= book.isbn %>">
           <input type="text" name="image_url" value="<%= book.image_url %>">
           <input type="text" name="description" value="<%= book.description %>">
-          <input type="text" name="bookshelf" value="<%= book.bookshelf %>">
-          <button type="submit">Selecet</button>
+          <input type="text" name="bookshelf" value="<%= book.bookshelf %>" required>
+          <button type="submit">Add to My Books</button>
         </form>
       </div>
       <% }) %>  
     </article>
     
-    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
   
 </html>

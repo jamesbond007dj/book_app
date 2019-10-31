@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Book Collection</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link href="styles/reset.css" rel="stylesheet"/>
-    <link href="styles/base.css" rel="stylesheet"/>
-    <link href="styles/layout.css" rel="stylesheet"/>
-    <link href="styles/icons.css" rel="stylesheet"/>
-    <link href="styles/modules.css" rel="stylesheet"/>
-  </head>
-  <body>
-    <header>
-      <h1>Best Books!</h1>
-      <p><a href="/">Home</a></p>
-      <p><a href="/searches">Search</a></p>
-    </header>
-    <h2>Search Results</h2>
-    <article>
-      <% books.forEach(book => { %>
-        <h4>Number of Books:<%= books.length %></h4>
-      <div>
-        <img src=<%= book.image_url %> alt="bookcover">
-        <h3><%= book.title %></h3>
-        <h4><%= book.author %></h4>
-        <p><%= book.description %></p>
-        <h4><%= book.isbn %></h4>
-      </div>
-      <% }) %>  
-    </article>
-   </body>
-</html>
 
+<head>
+  <title>Book Collection</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link href="styles/reset.css" rel="stylesheet" />
+  <link href="styles/base.css" rel="stylesheet" />
+  <link href="styles/layout.css" rel="stylesheet" />
+  <link href="styles/icons.css" rel="stylesheet" />
+  <link href="styles/modules.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1>Best Books!</h1>
+    <p><a href="/">Home</a></p>
+    <p><a href="/searches">Search</a></p>
+  </header>
+  <h2>My Books</h2>
+  <article>
+    <h4>Number of Books:<%= books.length %></h4>
+    <% books.forEach(book => { %>
+    <div>
+      <img src=<%= book.image_url %> alt="bookcover">
+      <h3>Title: <%= book.title %></h3>
+      <h4>Author: <%= book.author %></h4>
+      <p>Description: <%= book.description %></p>
+    </div>
+    <% }) %>
+  </article>
+</body>
+
+</html>

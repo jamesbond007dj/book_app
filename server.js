@@ -36,7 +36,7 @@ app.get('/books/:book_id', getOneBook);
 app.post('/add', createBook);
 
 app.get('/books', showForm);
-app.put('/books/:book_id', updateBook);
+// app.put('/books/:book_id', updateBook);
 
 app.get('*', (request, response) => {
   response.status(404).send('this route does not exist');
@@ -107,12 +107,12 @@ function createBook(request, response) {
   console.log('============================',request.body);
   let { title, author, description, image_url, isbn, bookshelf } = request.body;
 
-  let SQL = 'INSERT INTO books (title, author, description, image_url, isbn, bookshelf) VALUES ($1, $2, $3, $4, $5, $6);';
-  let values = [title, author, description, image_url, isbn, bookshelf ];
+  let SQL = 'INSERT INTO books (title, author, description, image_url, isbn, bookshelf) VALUES ($1, $2, $3, $4, $5, $6); ';
+  let values = [title, author, description, image_url, isbn, bookshelf];
 
   return client.query(SQL, values)
-    .then(response.redirect('/'))
-    .catch(err => handleError(err, response));
+    .then(response.redirect(`/books/${request.params.task_id}`))
+    .catch(err => errorHandler(err, response));
 }
 
 function updateBook(request, response){
