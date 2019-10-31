@@ -136,3 +136,15 @@ Finish time: 1 : 30 AM
 
 Actual time needed to complete: 1 HOUR 5 MIN
 
+------------------------------------------------------------
+
+Number and name of feature: LAB 12 : LAB FEAUTURE FOUR
+
+Estimate of time needed to complete: 1 HOUR
+
+Start time: 9 : 00 AM
+
+Finish time: 1 : 40 AM
+
+Actual time needed to complete: 4 HOURs 40 MIN
+
