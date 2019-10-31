@@ -12,11 +12,12 @@
   </head>
   <body>
     <header>
-      <h1>Best Books!</h1>
+      <h1>Book Detail</h1>
       <p><a href="/">Home</a></p>
     </header>
     <article>
         <section>
+          <img src=<%= bookInfo.image_url %> alt="bookcover">
           <h3>Title: <%= bookInfo.title %></h3>
           <h4>Author: <%= bookInfo.author %></h4>
           <p>Description: <%= bookInfo.description %></p>
