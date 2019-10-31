@@ -19,23 +19,24 @@
     <article>
       <% bookList.forEach(book => { %>
         <div>
-        <img src=<%= book.url %> alt="bookcover">
+        <img src=<%= book.image_url %> alt="bookcover">
         <h3><%= book.title %></h3>
         <h4><%= book.author %></h4>
         <p><%= book.description %></p>
         <button type="submit">Select this Book</button>
+        <form action="/add" method="post">
+          <input type="text" name="title" value="<%= book.title %>" >
+          <input type="text" name="author" value="<%= book.author %>" >
+          <input type="text" name="isbn" value="<%= book.isbn %>">
+          <input type="text" name="image_url" value="<%= book.image_url %>">
+          <input type="text" name="description" value="<%= book.description %>">
+          <input type="text" name="bookshelf" value="<%= book.bookshelf %>">
+          <button type="submit">Selecet</button>
+        </form>
       </div>
       <% }) %>  
     </article>
-    <form action='/searches' method='post'>
-      <input type="text" name="title" placeholder="Enter a title or author" required>
-      <input type="text" name="author" placeholder="Enter a title or author" required>
-      <input type="text" name="ISBN" placeholder="Enter a title or author" required>
-      <input type="text" name="image_url" placeholder="Enter a title or author" required>
-      <input type="text" name="description" placeholder="Enter a title or author" required>
-     
-      <button type="submit">Search the Google Books API</button>
-    </form>
+    
     
   </body>
   
