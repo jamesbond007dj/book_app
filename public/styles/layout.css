@@ -1,6 +1,9 @@
 
 body {
+  background: lightskyblue;
   width : 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
 }
 
 header {
@@ -12,31 +15,26 @@ header {
 
 }
 
-header p {
 
-  float: right;
-  line-height: 75px;
-  padding-right: 20px;
-}
-h1 {
-
-display: inline;
-font-size: 25px;
-line-height: 75px;
-padding: 20px;
-}
-
-h2 {
-
-  background-color: gray;
-  text-align: center;
-  height : 50px;
-  line-height: 50px;
-}
 
 article {
 
   text-align: center;
+}
+
+section {
+
+  background-color: lightsalmon;
+  border : 1px solid black;
+  display: inline-block;
+  height: 100%;
+  margin: 25px;
+  object-fit: scale-down;
+  position: relative;
+  margin: 20px 9px 20px 9px;
+  text-align: center;
+  width: 80%;
+
 }
 div {
   
@@ -52,27 +50,19 @@ div {
   width: 80%;
 }
 
-div p {
 
-  padding : 10px 200px 40px 200px;
-  text-align: left;
-}
 
-div img {
-  border : 10px solid white;
-  margin : 10px 200px 10px 200px;
+form {
+
   text-align: center;
+
 }
 
-div h3 {
 
-  padding : 10px 200px 10px 200px;
-  text-align: center;
+fieldset {
+  background-color: lightblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+  font-size: 2em;
+  margin : 20px;
+
 }
-
-div h4 {
- 
-  padding : 10px 200px 10px 200px;
-  text-align: center;
-}
-
