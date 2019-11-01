@@ -1,3 +1,5 @@
+'use strict'
+
 $(".form1").hide();
 
 $("#formButton").click(function(){

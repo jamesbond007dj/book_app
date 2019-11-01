@@ -36,8 +36,8 @@ app.get('/books/:book_id', getOneBook);
 app.post('/add', createBook);
 
 app.get('/books', showForm);
-// app.put('/books/:book_id', updateBook);
-
+app.put('/update/:book_id', updateBook);
+app.delete('/update/:book_id', deleteBook);
 app.get('*', (request, response) => {
   response.status(404).send('this route does not exist');
 })
@@ -128,7 +128,22 @@ function updateBook(request, response){
 
   client.query(sql, safeValues)
     .then(results => {
-      response.redirect(`/books/${request.params.task_id}`);
+      response.redirect(`/`);
+    })
+
+};
+
+function deleteBook(request, response){
+  console.log(request.body);
+  let { title, author, description, image_url, isbn, bookshelf } = request.body;
+
+  // update the database
+  let sql = 'DELETE FROM books WHERE id=$1;';
+  let safeValues = [request.params.book_id];
+
+  client.query(sql, safeValues)
+    .then(results => {
+      response.redirect(`/`);
     })
 
 };
