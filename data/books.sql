@@ -8,7 +8,3 @@ CREATE TABLE books (
   description TEXT,
   bookshelf VARCHAR(255)
   );
-
-INSERT INTO books (author, title, isbn, description, bookshelf) 
-VALUES('Ting', 'Bond', 56543-567, 'blah blah', 'mystry');
-

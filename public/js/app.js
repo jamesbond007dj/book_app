@@ -2,6 +2,11 @@
 
 $(".form1").hide();
 
-$("#formButton").click(function(){
-  $(".form1").toggle();
-});
+$(".formButton").on('click', bottomHandler);
+
+function bottomHandler(event) {
+  console.log(event.target);
+  $(event.target).next().toggle();
+}
+
+

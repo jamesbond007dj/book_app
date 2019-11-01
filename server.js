@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.use(methodOverride((request, response) => {
-  if(request.body && typeof request.body === 'object' && '_method' in request.body){
+  if (request.body && typeof request.body === 'object' && '_method' in request.body) {
     // look in the urlencoded POST body and delete it
     let method = request.body._method;
     delete request.body._method;
@@ -42,13 +42,13 @@ app.get('*', (request, response) => {
   response.status(404).send('this route does not exist');
 })
 
-function getBooks(request, response){
+function getBooks(request, response) {
   // go to the database and get all the tasks and display them
   const sql = `SELECT * FROM books;`;
   client.query(sql)
     .then(sqlResults => {
       const arrayOfBooks = sqlResults.rows;
-      response.render('pages/index', {books: arrayOfBooks});
+      response.render('pages/index', { books: arrayOfBooks });
     })
     .catch(error => errorHandler(error, response));
 }
@@ -88,7 +88,7 @@ function searchForBooks(request, response) {
     .catch(error => errorHandler(error, response));
 }
 
-function getOneBook(request, response){
+function getOneBook(request, response) {
   // go to the database, get a specific task using an id and show details of that task
   console.log(request.params.book_id);
 
@@ -98,27 +98,27 @@ function getOneBook(request, response){
   client.query(sql, safeValues)
     .then(sqlResults => {
       const selectedBook = sqlResults.rows[0];
-      response.render('pages/books/detail', {bookInfo: selectedBook})
+      response.render('pages/books/detail', { bookInfo: selectedBook })
     })
-    .catch(err => {console.error(err)});
+    .catch(err => { console.error(err) });
 }
 
 function createBook(request, response) {
-  console.log('============================',request.body);
+  console.log('============================', request.body);
   let { title, author, description, image_url, isbn, bookshelf } = request.body;
 
   let SQL = 'INSERT INTO books (title, author, description, image_url, isbn, bookshelf) VALUES ($1, $2, $3, $4, $5, $6) RETURNING ID; ';
   let values = [title, author, description, image_url, isbn, bookshelf];
 
   return client.query(SQL, values)
-  .then(results => {
-    const id = results.rows[0].id;
-    response.redirect(`/books/${id}`)
-  })
+    .then(results => {
+      const id = results.rows[0].id;
+      response.redirect(`/books/${id}`)
+    })
     .catch(err => errorHandler(err, response));
 }
 
-function updateBook(request, response){
+function updateBook(request, response) {
   console.log(request.body);
   let { title, author, description, image_url, isbn, bookshelf } = request.body;
 
@@ -133,7 +133,7 @@ function updateBook(request, response){
 
 };
 
-function deleteBook(request, response){
+function deleteBook(request, response) {
   console.log(request.body);
   let { title, author, description, image_url, isbn, bookshelf } = request.body;
 
@@ -145,13 +145,12 @@ function deleteBook(request, response){
     .then(results => {
       response.redirect(`/`);
     })
-
-};
+}
 
 
 function errorHandler(error, response) {
   console.log(error)
-  response.render('pages/error', {error:error});
+  response.render('pages/error', { error: error });
 }
 
 function Book(bookObj) {
@@ -160,13 +159,13 @@ function Book(bookObj) {
   this.description = bookObj.description || 'no description available';
   if (bookObj.imageLinks) {
     this.image_url = fixURL(bookObj.imageLinks.thumbnail)
-  } else {this.image_url = './noimage.png'}
+  } else { this.image_url = './noimage.png' }
   this.isbn = bookObj.industryIdentifiers[0].identifier || 'ISBN unavailable';
   this.bookshelf = 'Unassigned';
 }
 
 function fixURL(url) {
-  return url.replace(/http:/,'https:')
+  return url.replace(/http:/, 'https:')
 }
 
 app.listen(PORT, () => console.log(`app is listening on ${PORT}`));
