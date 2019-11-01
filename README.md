@@ -148,3 +148,15 @@ Finish time: 1 : 40 AM
 
 Actual time needed to complete: 4 HOURs 40 MIN
 
+------------------------------------------------------------
+
+Number and name of feature: LAB 13: LAB FEAUTURE ONE & TWO
+
+Estimate of time needed to complete: 4 HOUR
+
+Start time: 5 : 00 PM
+
+Finish time: 10 : 00 AM
+
+Actual time needed to complete: 4 HOUR
+

@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Book Collection</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link href="styles/reset.css" rel="stylesheet"/>
-    <link href="styles/base.css" rel="stylesheet"/>
-    <link href="styles/layout.css" rel="stylesheet"/>
-    <link href="styles/icons.css" rel="stylesheet"/>
-    <link href="styles/modules.css" rel="stylesheet"/>
-  </head>
+<%- include('../../partials/head') %>
+
   <body>
-    <header>
-      <h1>Book Detail</h1>
-      <p><a href="/">Home</a></p>
-    </header>
+    <%- include('../../partials/header') %>
+
     <article>
         <section>
           <img src=<%= bookInfo.image_url %> alt="bookcover">
@@ -36,9 +24,15 @@
           <input type="text" name="image_url" value="<%= bookInfo.image_url %>">
           <input type="text" name="description" value="<%= bookInfo.description %>">
           <input type="text" name="bookshelf" value="<%= bookInfo.bookshelf %>" required>
-          <button type="submit">Edit</button>
-          <button type="submit">Delete</button>
+          <button id="edit" type="submit">Edit</button>
+          
           </form>
+
+          <form action="/update/<%= bookInfo.id %>" method="post">
+            <input type='hidden' name="_method" value="delete">
+            <button id="delete" type="submit">Delete</button>
+          </form>
+
         </section>
       </article>
 </body>

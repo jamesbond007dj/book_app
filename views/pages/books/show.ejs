@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Book Collection</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link href="styles/reset.css" rel="stylesheet"/>
-    <link href="styles/base.css" rel="stylesheet"/>
-    <link href="styles/layout.css" rel="stylesheet"/>
-    <link href="styles/icons.css" rel="stylesheet"/>
-    <link href="styles/modules.css" rel="stylesheet"/>
-  </head>
+<%- include('../../partials/head') %>
+
   <body>
-    <header>
-      <h1>Best Books!</h1>
-      <p><a href="/">Home</a></p>
-    </header>
+    <%- include('../../partials/header') %>
+
     <article>
         <% books.forEach(book => { %>
           <h4>Number of Books:<%= books.length %></h4>
@@ -28,5 +16,6 @@
         </section>
         <% }) %>  
       </article>
+
 </body>
 </html>
