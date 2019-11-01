@@ -107,11 +107,14 @@ function createBook(request, response) {
   console.log('============================',request.body);
   let { title, author, description, image_url, isbn, bookshelf } = request.body;
 
-  let SQL = 'INSERT INTO books (title, author, description, image_url, isbn, bookshelf) VALUES ($1, $2, $3, $4, $5, $6); ';
+  let SQL = 'INSERT INTO books (title, author, description, image_url, isbn, bookshelf) VALUES ($1, $2, $3, $4, $5, $6) RETURNING ID; ';
   let values = [title, author, description, image_url, isbn, bookshelf];
 
   return client.query(SQL, values)
-    .then(response.redirect(`/books/${request.params.task_id}`))
+  .then(results => {
+    const id = results.rows[0].id;
+    response.redirect(`/books/${id}`)
+  })
     .catch(err => errorHandler(err, response));
 }
 
