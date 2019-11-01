@@ -1,0 +1,104 @@
+h1 {
+
+display: inline;
+font-size: 25px;
+line-height: 75px;
+padding: 20px;
+
+}
+
+h2 {
+
+  background-color: gray;
+  text-align: center;
+  height : 50px;
+  line-height: 50px;
+}
+
+header p {
+  
+  color: #fff;
+  font-family: Sans-serif;
+  font-size: 20px;
+  float: right;
+  line-height: 75px;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+section h5 {
+
+  
+  margin: 10px;
+}
+
+section p {
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  margin: 10px;
+  line-height: 1.5em;
+}
+
+section img {
+  border : 5px solid white;
+  margin : 10px 200px 10px 200px;
+  text-align: center;
+}
+
+div p {
+  
+  padding : 10px 200px 40px 200px;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+div img {
+  border : 5px solid white;
+  margin : 10px 200px 10px 200px;
+  text-align: center;
+}
+
+div h3 {
+
+  padding : 10px 200px 10px 200px;
+  text-align: center;
+}
+
+div h4 {
+  
+  padding : 10px 200px 10px 200px;
+  text-align: center;
+}
+
+#searchTitle {
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3em;
+  margin : 30px;
+  text-align: center;
+}
+
+button {
+  background: rgb(22, 104, 93);
+  border: 0.5px solid white;
+  color: #fff;
+  font-family: Sans-serif;
+  font-size: 20px;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+
+}
+
+button:hover {
+  background: #CF4647;
+}

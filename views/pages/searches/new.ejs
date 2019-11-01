@@ -2,7 +2,7 @@
 
   <body>
     <main>
-      <h1>Search for Books</h1>
+      <h6 id="searchTitle">Search for Books</h6>
       <!-- action visits the route and method is the route method -->
       <form action='/searches' method='post'>
         <input type="text" name="search" placeholder="Enter a title or author" required>
@@ -12,7 +12,6 @@
             <input type="radio" name="search" value="title" required>
           </label>
         </fieldset>
-
         <fieldset>
             <label for="author">
               <span>Author</span>
